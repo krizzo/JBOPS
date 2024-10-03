@@ -59,7 +59,8 @@ if not os.path.isdir(show_path):
 for library in library_name:
     for child in plex.library.section(library).all():
         # Clean names of special characters
-        name = re.sub('\W+', ' ', child.title)
+        # name = re.sub('\W+', ' ', child.title)
+        name = child
         # Add (year) to name
         name = '{} ({})'.format(name, child.year)
         # Pull URL for poster
